@@ -1,0 +1,45 @@
+@Entity
+public class Item {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String category;
+    private String description;
+    private String location;
+    private LocalDate date;
+    private Boolean found;
+
+    @ManyToOne
+    private User postedBy;
+}
+
+
+public interface ItemRepository extends JpaRepository<Item, Long> {
+    List<Item> findByCategory(String category);
+}
+
+
+@RestController
+@RequestMapping("/api/items")
+public class ItemController {
+
+    @Autowired
+    private ItemService service;
+
+    @PostMapping
+    public ResponseEntity<Item> create(@RequestBody Item item) {
+        return ResponseEntity.ok(service.create(item));
+    }
+}
+
+
+GET /api/reports/items/pdf
+
+
+DELETE /api/admin/items/{id}
+
+sql
+CREATE TABLE users (...)
+CREATE TABLE items (...)
+CREATE TABLE comments (...)
