@@ -1,0 +1,28 @@
+lost-and-found/
+│
+├── backend/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/municipality/lostfound/
+│   │   │   │   ├── config/
+│   │   │   │   ├── controllers/
+│   │   │   │   ├── dto/
+│   │   │   │   ├── entities/
+│   │   │   │   ├── exceptions/
+│   │   │   │   ├── repositories/
+│   │   │   │   ├── security/
+│   │   │   │   ├── services/
+│   │   │   │   └── LostFoundApplication.java
+│   │   │   └── resources/
+│   │   │       ├── application.properties
+│   │   │       ├── schema.sql
+│   │   │       └── data.sql (optional)
+│   │   └── test/
+│   └── pom.xml
+│
+├── frontend/ (optional Angular/React/Vue)
+│   └── ...
+│
+├── docs/ (UML + report + presentation)
+├── README.md
+└── docker-compose.yml 
